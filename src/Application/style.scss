@@ -1,0 +1,121 @@
+// __________________________АБНУЛЕНИЕ_______________________________________________________
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+*{padding: 0;margin: 0;border: 0; font-family: 'Nunito', sans-serif; transition: all .2s linear;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+
+// PEREMENNYE
+$green:#27ae60;
+$black:#192a56;
+$light-color:#666;
+$boxshad:0 .5rem 1.5rem rgba(0,0,0,.1);
+
+// NAVBAR
+#menu{
+  display: none;
+}
+.header{position: fixed;top:0; left: 0; right:0;background: #fff;display: flex;z-index: 1000;box-shadow: $boxshad;display: flex;}
+.header__container{
+  width: 95%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .header__logo{
+    font-size: 2.2rem;
+    font-weight: bolder;
+    padding: 1rem 0;
+    color: $black;
+    span{
+      color: $green;
+    }
+  }
+  .header__navbar{
+    a{
+      color: $black;
+      font-size: 1.2rem;
+      border-radius: .5rem;
+      padding:.5rem 1.5rem;
+      &:hover{
+        color: #27ae60;
+      }
+    }
+  }
+  .header__icons{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
+.header__container .header__navbar__activate{
+  a{
+    color: $black;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding:.5rem 1.5rem;
+    &:hover{
+      color: #27ae60;
+    }
+  }
+
+
+}
+// adaptacia
+
+@media (max-width:768px){
+  #menu{
+    display: block;
+    position: relative;
+    z-index: 3;
+  }
+  .header__container .header__navbar{
+    display: none;
+  }
+
+  .header__container .header__navbar__activate{
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    top:75px; left:0; right:0;
+    background:#fff;
+
+
+  }
+
+  .header__container .header__navbar__activate a{
+    display: block;
+    padding:1.2rem;
+    margin:0.4rem;
+    font-size: 1.2rem;
+    background:#eee;
+  }
+}
+@media (max-width:630px){
+  .header{
+    .header__logo{
+      font-size: 1.5rem;
+    }
+    .header__icons{
+      div{
+        img{
+          width: 24px;
+
+        }
+      }
+    }
+  }
+  .header .header__navbar__activate a{
+    padding:1rem;
+    margin:0.2rem;
+    font-size: 1rem;
+  }
+}
+.spa{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
